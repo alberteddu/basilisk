@@ -1,7 +1,7 @@
 # Basilisk
 
 Basilisk is a chat application. A NodeJS server is provided, along with a
-client (HTML, CSS, JavaScript). A PHP server is also included, which can 
+client (HTML, CSS, JavaScript + AngularJS). A PHP server is also included, which can
 replace the NodeJS one.
 
 # Usage
@@ -17,7 +17,7 @@ Then run this command in the same directory to start the server:
 	node bin/basilisk.js
 
 To run the PHP server, PHP is required. First install the dependencies using 
-composer (see [https://getcomposer.org/]) by running this command in the 
+composer (see https://getcomposer.org/) by running this command in the
 "server-php" directory: 
 
 	php composer.phar install
@@ -38,7 +38,7 @@ server up in seconds is to run this command in the "client" directory:
 
 	python -m SimpleHTTPServer
 
-After that, open [http://localhost:8000/] in your browser.
+After that, open http://localhost:8000 in your browser.
 
 Now you can choose a username and login to the chat. To test the offline 
 capabilities in a local machine, you can trigger a disconnection of the client 
