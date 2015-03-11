@@ -32,8 +32,8 @@ Then run this command in the same directory to start the server:
 
 The client does not have any dependencies, except for some JavaScript libraries 
 which are already included. To work properly, the client can't be run by just 
-double clicking in the main file (index.html). It needs an HTTP server, 
-like Apache. If you have Python available, a very simple way to get an HTTP 
+double clicking in the main file (index.html). It needs an HTTP server. 
+If you have Python available, a very simple way to get an HTTP 
 server up in seconds is to run this command in the "client" directory:
 
 	python -m SimpleHTTPServer
