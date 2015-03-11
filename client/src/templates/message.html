@@ -1,0 +1,19 @@
+<div class="author col span-3-of-12">
+    <span ng-class="{pending: message.pending}" class="name label"
+          title="{{ message.date | date:'dd/MM/yyyy HH:mm' }}">
+        {{ message.author }}
+    </span>
+</div>
+<div class="message col span-9-of-12">
+    <!-- This message has a template -->
+    <div class="contents" ng-if="message.template" ng-include="template(message.template)"></div>
+
+    <!-- The contents were passed in the options object -->
+    <span class="contents" ng-if="!message.template">
+        {{ message.message }}
+    </span>
+
+    <small class="date">
+        {{ message.date | date:'dd/MM/yyyy HH:mm' }}
+    </small>
+</div>

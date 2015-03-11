@@ -1,0 +1,21 @@
+<div class="animate fade" id="chat-container" ng-show="usernameChosen">
+    <!-- User messages -->
+    <div id="normal-messages-container" class="messages-container">
+        <div ng-class="{server: message.server, invert: message.invert, pending: message.pending}"
+             class="non-sticky section group message-container {{ message.level }}"
+             ng-repeat="message in messages()"
+             basilisk-after-repeat="newMessageRendered()"
+             ng-include="template('message')">
+        </div>
+    </div>
+
+    <!-- Sticky messages -->
+    <div id="sticky-messages-container" class="messages-container">
+        <div ng-class="{server: message.server, selected: message.selected, invert: message.invert}"
+             class="sticky section group message-container {{ message.level }}"
+             ng-repeat="message in stickyMessages()"
+             basilisk-after-repeat="newMessageRendered()"
+             ng-include="template('message')">
+        </div>
+    </div>
+</div>

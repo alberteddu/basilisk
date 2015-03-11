@@ -1,0 +1,16 @@
+<div class="animate fade" id="login-container" ng-hide="usernameChosen">
+    <h1>Basilisk</h1>
+
+    <form ng-submit="connect()">
+        <input class="input-text" placeholder="Username" ng-model="user.name" id="username-text" type="text" basilisk-after-render="focusUsernameInput()" autocomplete="off" />
+        <small class="help">Valid usernames can contain letters and numbers.</small>
+
+        <br/><br/>
+
+        <input class="input-button" type="submit" ng-disabled="!isUsernameValid()" value="Connect" />
+
+        <small class="status-message" ng-class="statusMessage.getLevel()" ng-show="!statusMessage.isEmpty()">
+            {{ statusMessage.getContents() }}
+        </small>
+    </form>
+</div>
